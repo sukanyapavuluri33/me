@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DATA INSERTION INTO TABLE
+        </title>
+        <STYLE>
+            body{
+                justify-content: center;
+                display: flex;
+
+            }
+           table,td,th{
+            border:3px solid blue;
+           }
+           table,td,th{
+            border-collapse: collapse;
+           }
+           .box{
+            height:800px;
+            width:800px;
+            background-color: coral;
+
+           }
+           .button{
+            color:pink;
+            background-color:RED
+           }
+        </STYLE>
+    </head>
+    <body>
+        <div class="box">
+            <h1 style="text-align:center">DATA FORM</h1>
+            <div style="padding:10px;margin:5px;">
+            <form  onsubmit="fun()">
+        <div >
+            <label>FIRST NAME</label>
+            <input type="text" name="fname" value="" id="fname">
+        </div><br><br>
+        <div >
+            <label>LAST NAME</label>
+            <input type="text" name="lname" value="" id="lname">
+        </div><br><br>
+        <div >
+            <label>E-MAIL</label>
+            <input type="text" name="email" value="" id="email">
+        </div><br><br>
+        <div >
+            <label>MOBILE</label>
+            <input type="text" name="mobile" value="" id="mobile">
+        </div><br><br>
+        <div >
+            <label>AGE</label>
+            <input type="text" name="age" value="" id="age">
+        </div><br><br>
+        <input type="submit" value="submit" class="button"></form>
+        <table>
+            <tr>
+                <th>
+                    FIRST NAME
+                </th>
+           
+                <th>
+                    LAST NAME
+                </th>
+            
+                <th>
+                    E-MAIL
+                </th>
+           
+                <th>
+                    MOBILE
+                </th>
+            
+                <th>
+                    AGE
+                </th>
+            </tr>
+            <tbody ID="body"></tbody>
+        </table>
+        <script>
+            function fun(){
+                event.preventDefault();
+                var fname=document.getElementById("fname").value;
+                var lname=document.getElementById("lname").value;
+                var email=document.getElementById("email").value;
+                var phone=document.getElementById("mobile").value;
+                var age=document.getElementById("age").value;
+                var tdata=document.getElementById("body");
+                 clear();
+                 var tbdata=`<tr>
+                    <td>fname</td>
+                    <td>lname</td>
+                    <td>email</td>
+                    <td>mobile</td>
+                    <td>age</td></tr>`
+                tdata.innerHTML=tdata.innerHTML+tbdata
+            }
+            function clear(){
+                document.getElementById("fname").value=""
+                document.getElementById("lname").value=""
+                document.getElementById("email").value=""
+                document.getElementById("mobile").value=""
+               document.getElementById("age").value=""
+
+            }
+
+        </script>
+        
+        </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+           
+        </title>
+    </head>
+    <BODY>
+        <script>
+           let num=324
+           function first(){
+            let r
+           let sum=0
+           function sec(){
+            while(num!=0){
+               r=num%10
+               sum=sum*10+r
+               num=Math.floor(num/10) 
+            }
+            console.log("reverse is",sum)
+
+           }
+           sec()
+           }
+          first()
+           
+            </script>
+            </BODY></html>
+
+
+//GREATEST OF THREE NUMBERS PROGRAM
+<html>
+    <head>
+        <title>GREATEST OF THREE NUMBERS</title>
+    </head>
+    <BODY>
+        <script>
+            function gr(a,b,c){
+                if(a>b && a>c)
+                console.log(a, " is large")
+                else if(b>a && b>c)
+                console.log(b," is large")
+                else
+                console.log(c," is large")
+            }
+            let a=window.prompt("enter any number")
+            let b=window.prompt("enter any number")
+            let c=window.prompt("enter any number")
+            gr(a,b,c)
+        
+        </script>
+    </BODY>
+</html>

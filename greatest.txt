@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>GREATEST OF THREE NUMBERS</title>
+    </head>
+    <BODY>
+        <script>
+            function gr(a,b,c){
+                if(a>b && a>c)
+                console.log(a, " is large")
+                else if(b>a && b>c)
+                console.log(b," is large")
+                else
+                console.log(c," is large")
+            }
+            let a=window.prompt("enter any number")
+            let b=window.prompt("enter any number")
+            let c=window.prompt("enter any number")
+            gr(a,b,c)
+        
+        </script>
+    </BODY>
+</html>

@@ -1,0 +1,50 @@
+<?php
+$n=15;
+
+  if($n%3==0 && $n%5==0){
+    echo "FizzBuzz\n";
+  }
+  else if($n%3==0 && $n%5!=0){
+    echo "Fizz\n";
+  }
+  else if($n%3!=0 && $n%5==0){
+    echo "Buzz\n";
+  }
+  else{
+    echo "$n";
+  }
+
+
+?>
+
+
+//call bind apply methods practice//
+<html>
+    <head>CALL,APPLY, BIND METHODS
+        <title>
+           
+        </title>
+    </head>
+    <BODY>
+        <script>
+            var ob = {
+
+//member functions of object
+          display:function(id,phone,course){
+            console.log("My name is ",this.name," my id is ",id," my phone number is ",phone," and my course is ",course)
+          }
+            }
+            var ob2 = {
+                name:"sukanya",
+                
+            }
+            var ob3={
+                name:"Srilu"
+            }
+            ob.display.call(ob2,599,765980,"FSD")
+            ob.display.apply(ob2,[566,83478,"CSS"])
+            var mine=ob.display.bind(ob3)
+            mine(685,986556,"JAVAscript")
+
+</script>
+    </BODY></html>

@@ -1,0 +1,17 @@
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            var ages=[67,34,50,70,20,10,30,41,62];
+            console.log("before filter ages ",ages);
+            ages=ages.filter(function(element){
+                return element>30;
+             });
+            console.log("after filter ages ",ages);
+
+
+           
+        </script>
+    </body>
+</html>

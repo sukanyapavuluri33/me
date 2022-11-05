@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><h2>FORM VALIDATION</h2>
+        <title> SAMPLE FORM</title>
+        <STYLE>
+            .box{
+                border-color: aqua;
+                padding-bottom: 10px;
+                padding-block: 5px;
+                color:brown;
+                padding:10px;
+            }
+            body{
+          background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLWcNlbz8RX7-qtROiBtspkVmlckA6JPMVAg&usqp=CAU");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+            }
+            .ebox{
+                color:red;
+            }
+        </STYLE>
+    </head>
+    <body>
+        <form   onsubmit="check()"><br><br>
+        <div>
+            <label>FIRST NAME: </label>
+        <input class="box" type="text"  name="fname" id="fname" value="" size="15" ></div><br>
+       <div> <label>LAST NAME: </label>
+        <input class="box" type="text"  name="lname" id="lname" value="" size="15" ></div><br>
+       <div ><label>EMAIL-ID: </label>
+        <input class="box" type="text"  name="email" id="email" value="" size="20" ></div><br>
+        <div><label>AGE: </label>
+        <input class="box" type="text" size="5" placeholder="46" id="age"></div><br>
+        <div><label>ADDRESS: </label>
+        <textarea class="box"  cols="27" id="address" name="address"></textarea></div><br>
+        <div class="ebox" id="error"></div><br><br>
+        <input class="box"type="submit" value="SUBMIT" NAME="SUBMIT">
+        </form>
+        <script>
+           
+            function check() {
+                
+                isError = false;
+                document.getElementById("error").innerHTML="";
+                event.preventDefault();
+                var error=[];
+               var fname=document.getElementById("fname").value;
+               var lname=document.getElementById("lname").value;
+               var email=document.getElementById("email").value;
+               var age=document.getElementById("age").value;
+               var  address=document.getElementById("address").value;
+              if(fname===""){
+                  error.push("please enter first name");
+                  isError =true;
+              }
+              else if(lname===""){
+                error.push("please enter last name");
+                isError = true;
+              }
+              else if(email===""){
+                error.push("please enter email");
+                isError = true;
+              }
+              else if(age===""){
+                error.push("please enter age");
+                isError = true;
+              }
+              else if(address===""){
+                error.push("please enter address");
+                isError = true;
+              }
+              console.log(fname,lname,email,age,address);
+              if(isError===true) {
+              setError(error);
+              }
+            }
+            function setError(error){
+                document.getElementById("error").innerHTML=error[0];
+            }
+        </script>
+    </body>
+</html>
