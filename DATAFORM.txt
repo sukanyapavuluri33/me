@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            DATA INSERTION INTO TABLE
+            DATA INSERTION INTO TABLES
         </title>
         <STYLE>
             body{
