@@ -7,7 +7,7 @@
     <BODY>
         <script>
            let num=324
-           function first(){
+           function firs(){
             let r
            let sum=0
            function sec(){
@@ -21,7 +21,7 @@
            }
            sec()
            }
-          first()
+          firs()
            
             </script>
             </BODY></html>
